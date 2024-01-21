@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree/static/Figtree-Regular.ttf");
+}
+
+@font-face {
+  font-family: "RubikDoodleShadow";
+  src: url("./assets/fonts/RubikDoodleShadow/RubikDoodleShadow-Regular.ttf");
+}
+
+:root {
+  --main-font-family: "Figtree";
+  --secondary-font-family: "RubikDoodleShadow"; 
+  --bg-color: rgb(48, 12, 12);
+  --accent-color: #D10000; 
+}
+
+.first-letter {
+  font-family: var(--secondary-font-family);
+}
+
+html, body {
+  height: 100%;
+}
+
+*, body {
+  font-family: var(--main-font-family);
+  background-color: var(--bg-color);
+}
