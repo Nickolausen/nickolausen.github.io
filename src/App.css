@@ -11,12 +11,15 @@
 :root {
   --main-font-family: "Figtree";
   --secondary-font-family: "RubikDoodleShadow"; 
-  --bg-color: rgb(48, 12, 12);
+  --bg-color: white;
+  --primary-color: black;
+  --secondary-color: rgb(201, 201, 201);
   --accent-color: #D10000; 
 }
 
 .first-letter {
-  font-family: var(--secondary-font-family);
+  /* font-family: var(--secondary-font-family); */
+  color: var(--accent-color);
 }
 
 html, body {
@@ -26,4 +29,9 @@ html, body {
 *, body {
   font-family: var(--main-font-family);
   background-color: var(--bg-color);
+}
+
+nav, a {
+  color: white;
+  background-color: var(--accent-color);
 }
