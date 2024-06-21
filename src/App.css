@@ -14,7 +14,7 @@
   --bg-color: white;
   --primary-color: black;
   --secondary-color: rgb(201, 201, 201);
-  --accent-color: #D10000; 
+  --accent-color: rgb(209, 0, 0); 
 }
 
 .first-letter {
@@ -33,4 +33,13 @@ html, body {
 *, body {
   font-family: var(--main-font-family);
   background-color: var(--bg-color);
+}
+
+progress::-webkit-progress-bar 
+{
+  background-color: rgba(209,0,0, .25);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--accent-color);
 }
