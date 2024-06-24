@@ -1,9 +1,15 @@
 import styles from './Button.module.css'
 
-function Button(): JSX.Element
+type Props = {
+    classNames?: string,
+    text?: string,
+    onClickHandler?: React.MouseEventHandler<HTMLButtonElement>
+}
+
+function Button({classNames, text, onClickHandler}: Props): JSX.Element
 {
     return <>
-        <button className={styles.btn + " text-l text-white p-4 px-5 rounded-lg white uppercase self-start"}>Download My CV</button>
+        <button onClick={onClickHandler} className={classNames + " " + styles.btn + " text-l text-white p-4 px-5 rounded-lg white uppercase self-start"}>{text}</button>
     </>
 }
 

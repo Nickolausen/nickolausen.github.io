@@ -27,12 +27,21 @@ function Education()
     return (
         <section id='education' className="pt-10">
             <h1 className="text-5xl font-bold uppercase">Education</h1>
-            <div className="flex flex-col gap-20 justify-center content-center flex-wrap pt-10">
+            <div className="flex flex-row gap-5 justify-center content-center flex-wrap pt-10">
+                <div className="min-w-20 flex flex-col justify-center">
+                    <hr className={styles.line}></hr>
+                </div>
                 <EducationCard></EducationCard>
+                <div className="min-w-20 flex flex-col justify-center">
+                    <hr className={styles.line}></hr>
+                </div>
                 <EducationCard></EducationCard>
+                <div className="min-w-20 flex flex-col justify-center">
+                    <hr className={styles.line}></hr>
+                </div>
             </div>
             <h2 className="text-4xl font-bold uppercase pt-10">Certifications <span className="text-2xl">& more</span></h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-7 pt-5 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-7 pt-5 gap-2">
                 <div className={styles.grid_cell + " row-span-7"}>
                     <div className="text-sm text-gray-500">Issued on: 29/07/2023</div>
                     <div className="text-2xl">Cambridge Advanced English (CAE)</div>
@@ -41,31 +50,34 @@ function Education()
                         <div>Grade C</div>
                     </div>
                     <div className="grow"></div>
-                    <div className="text-2xl font-bold accent-clr">Table of Scores</div>
+                    <div className="mt-10 md:mt-0 text-2xl font-bold accent-clr">Table of Scores</div>
                     <table className="mt-4">
                         <tr>
                             <td className="text-xl">Speaking:</td>
-                            <td className="text-xl">
-                                <progress value={187} max={210}></progress>
+                            <td className="text-xl flex justify-end">
+                                <progress className="hidden xl:block" value={187} max={210}></progress>
+                                <p className="block xl:hidden"><span className="accent-clr">187</span>/210</p>
                             </td>
                         </tr>
                         <tr>
                             <td className="text-xl">Listening:</td>
-                            <td className="text-xl">
-                                <progress value={205} max={210}></progress>
+                            <td className="text-xl flex justify-end">
+                                <progress className="hidden xl:block" value={205} max={210}></progress>
+                                <p className="block xl:hidden"><span className="accent-clr">205</span>/210</p>
                             </td>
                         </tr>
                         <tr>
                             <td className="text-xl">Reading:</td>
-                            <td className="text-xl">
-                                <progress value={188} max={210}></progress>
-                                
+                            <td className="text-xl flex justify-end">
+                                <progress className="hidden xl:block" value={188} max={210}></progress>
+                                <p className="block xl:hidden"><span className="accent-clr">188</span>/210</p>
                             </td>
                         </tr>
                         <tr>
                             <td className="text-xl">Writing:</td>
-                            <td className="text-xl">
-                                <progress className="accent-clr" value={172} max={210}></progress>
+                            <td className="text-xl flex justify-end">
+                                <progress className="hidden xl:block" value={172} max={210}></progress>
+                                <p className="block xl:hidden"><span className="accent-clr">172</span>/210</p>
                             </td>
                         </tr>
                     </table>
@@ -132,7 +144,7 @@ function Education()
                     </div>
                 </div>
                 <div className={styles.grid_cell + " row-span-3"}>
-                    <div className="text-sm text-gray-500">Issued on: DD/MM/YYYY</div>
+                    <div className="text-sm text-gray-500">Issued on: 26/11/2022</div>
                     <div className="text-2xl">"Pizzinelli" Foundation Scholarship</div>
                     <div className="grow"></div>
                     <div className="text-xl accent-clr">'Marco Pizzinelli' Foundation @ Cesena, IT</div>
@@ -151,7 +163,7 @@ function Education()
                 </div>
             </div>
             <h2 className="text-4xl font-bold uppercase pt-10">Technical Knowledge</h2>
-            <div className="grid md:grid-cols-2 pt-10">
+            <div className="grid lg:grid-cols-2 pt-10">
                 <div className="flex flex-wrap flex-col content-center">
                     <div className="flex justify-center">
                         <svg width="100" height="100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
@@ -161,11 +173,13 @@ function Education()
                     <h3 className="mt-5 text-2xl text-center font-bold">Learnt from School</h3>
                     <hr className="my-3"></hr>
                     <table>
-                        { from_school.map(item => 
-                            <tr className="text-xl">
-                                <td className="pe-10">{item.name}</td>
-                                <td className="text-end accent-clr">{item.expertise}</td>
-                            </tr>)}
+                        { 
+                            from_school.map(item => 
+                                <tr className="text-xl">
+                                    <td className="pe-10">{item.name}</td>
+                                    <td className="text-end accent-clr">{item.expertise}</td>
+                                </tr>)
+                        }
                     </table>
                 </div> 
                 <div className="flex flex-wrap flex-col content-center">
@@ -177,11 +191,13 @@ function Education()
                     <h3 className="mt-5 text-2xl text-center font-bold">Self-taught</h3>
                     <hr className="my-3"></hr>
                     <table className="mt-5">
-                        { self_taught.map(item => 
-                            <tr className="text-xl">
-                                <td className="pe-10">{item.name}</td>
-                                <td className="text-end accent-clr">{item.expertise}</td>
-                            </tr>)}
+                        { 
+                            self_taught.map(item => 
+                                <tr className="text-xl">
+                                    <td className="pe-10">{item.name}</td>
+                                    <td className="text-end accent-clr">{item.expertise}</td>
+                                </tr>)
+                        }
                     </table>
                 </div>
             </div>

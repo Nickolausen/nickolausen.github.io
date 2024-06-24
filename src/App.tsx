@@ -1,10 +1,11 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 import InitialScreen from './pages/InitialScreen'
 import Education from './pages/Education'
 import Projects from './pages/Projects'
-import Footer from './components/Footer'
+import ContactMe from './pages/ContactMe'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <InitialScreen></InitialScreen>
         <Education></Education>
         <Projects></Projects>
+        <ContactMe></ContactMe>
       </div>
       <Footer></Footer>
     </>
