@@ -1,29 +1,38 @@
 import EducationCard from "../components/EducationCard"
+import { EducationTitle } from "../data/EducationTitle"
 import styles from './Education.module.css'
+
+const from_school = [
+    {name: "C", expertise: "Intermediate"},
+    {name: "C#", expertise: "Intermediate"},
+    {name: "Design a WPF", expertise: "Intermediate"},
+    {name: "JavaScript & JQuery", expertise: "Intermediate"},
+    {name: "HTML", expertise: "Excellent"},
+    {name: "CSS & Bootstrap", expertise: "Excellent"},
+    {name: "SQL", expertise: "Intermediate"},
+    {name: "Design in Figma", expertise: "Intermediate"},
+    {name: "Design a network w/CISCO Packet Tracer", expertise: "Beginner"},
+]
+
+const self_taught = [
+    {name: "Python", expertise: "Beginner"},
+    {name: "Manim - python library", expertise: "Intermediate"},
+    {name: "React", expertise: "Beginner"},
+    {name: "Vue", expertise: "Beginner"},
+    {name: "Tailwind CSS", expertise: "Intermediate"},
+    {name: "Typescript", expertise: "Beginner"},
+]
+
+const education_university: EducationTitle = {
+    start_year: 2023,
+    end_year: 2026,
+    title_description: "Degree in Computer Science and Engineering",
+    where: "Alma Mater Studiorum, University of Bologna @ Cesena, IT",
+    grade: NaN,
+    max_grade: 110}
 
 function Education() 
 {
-    const from_school = [
-        {name: "C", expertise: "Intermediate"},
-        {name: "C#", expertise: "Intermediate"},
-        {name: "Design a WPF", expertise: "Intermediate"},
-        {name: "JavaScript & JQuery", expertise: "Intermediate"},
-        {name: "HTML", expertise: "Excellent"},
-        {name: "CSS & Bootstrap", expertise: "Excellent"},
-        {name: "SQL", expertise: "Intermediate"},
-        {name: "Design in Figma", expertise: "Intermediate"},
-        {name: "Design a network w/CISCO Packet Tracer", expertise: "Beginner"},
-    ]
-
-    const self_taught = [
-        {name: "Python", expertise: "Beginner"},
-        {name: "Manim - python library", expertise: "Intermediate"},
-        {name: "React", expertise: "Beginner"},
-        {name: "Vue", expertise: "Beginner"},
-        {name: "Tailwind CSS", expertise: "Intermediate"},
-        {name: "Typescript", expertise: "Beginner"},
-    ]
-
     return (
         <section id='education' className="pt-10">
             <h1 className="text-5xl font-bold uppercase">Education</h1>
@@ -31,7 +40,7 @@ function Education()
                 <div className="min-w-20 flex flex-col justify-center">
                     <hr className={styles.line}></hr>
                 </div>
-                <EducationCard></EducationCard>
+                <EducationCard data={education_university}></EducationCard>
                 <div className="min-w-20 flex flex-col justify-center">
                     <hr className={styles.line}></hr>
                 </div>
