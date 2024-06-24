@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import InitialScreen from './pages/InitialScreen'
 import Education from './pages/Education'
 import Projects from './pages/Projects'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Education></Education>
         <Projects></Projects>
       </div>
+      <Footer></Footer>
     </>
   )
 }

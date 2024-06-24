@@ -32,9 +32,9 @@ function Education()
                 <EducationCard></EducationCard>
             </div>
             <h2 className="text-4xl font-bold uppercase pt-10">Certifications <span className="text-2xl">& more</span></h2>
-            <div className="grid grid-cols-3 grid-rows-7 pt-5 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-7 pt-5 gap-2">
                 <div className={styles.grid_cell + " row-span-7"}>
-                    <div className="text-sm text-gray-500">Issued on: DD/MM/YYYY</div>
+                    <div className="text-sm text-gray-500">Issued on: 29/07/2023</div>
                     <div className="text-2xl">Cambridge Advanced English (CAE)</div>
                     <div className="mt-5 flex flex-row justify-between">
                         <div className="font-bold text-2xl">C1 Level</div>
@@ -151,7 +151,7 @@ function Education()
                 </div>
             </div>
             <h2 className="text-4xl font-bold uppercase pt-10">Technical Knowledge</h2>
-            <div className="grid grid-cols-2 pt-10">
+            <div className="grid md:grid-cols-2 pt-10">
                 <div className="flex flex-wrap flex-col content-center">
                     <div className="flex justify-center">
                         <svg width="100" height="100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
@@ -163,7 +163,7 @@ function Education()
                     <table>
                         { from_school.map(item => 
                             <tr className="text-xl">
-                                <td className="pe-8">{item.name}</td>
+                                <td className="pe-10">{item.name}</td>
                                 <td className="text-end accent-clr">{item.expertise}</td>
                             </tr>)}
                     </table>
@@ -179,7 +179,7 @@ function Education()
                     <table className="mt-5">
                         { self_taught.map(item => 
                             <tr className="text-xl">
-                                <td className="pe-8">{item.name}</td>
+                                <td className="pe-10">{item.name}</td>
                                 <td className="text-end accent-clr">{item.expertise}</td>
                             </tr>)}
                     </table>
