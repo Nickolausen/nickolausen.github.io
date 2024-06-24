@@ -31,7 +31,12 @@ function Navbar()
                     switch (item.name) 
                     {
                         case "N.M. portfolio":
-                            output = <a href={item.href} className={classNames(item.current ? '' : '') + ' text-4xl grow'}><span className="first-letter">N</span>.<span className="first-letter">M</span>. portfolio</a>
+                            output = <>
+                                <a href={item.href} className={classNames(item.current ? '' : '') + ' text-4xl grow'}><span className="first-letter">N</span>.<span className="first-letter">M</span>. portfolio</a>
+                                <small className="px-2 bg-yellow-300 rounded-lg">
+                                    This site is currently work in progress!
+                                </small>
+                            </>
                             break
                         
                         case "Contact Me":

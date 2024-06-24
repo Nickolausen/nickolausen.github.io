@@ -10,7 +10,7 @@ function ProjectCard() {
                 <span className='font-bold'>Created on: </span><span className='text-gray-500'>24/05/2023</span> | <span className='font-bold'>Last Update: </span><span className='text-gray-500'>24/05/2023</span>
             </small>
             <p className='text-pretty py-5'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores veniam praesentium ipsam quos quaerat molestias, quia, dolorum neque hic, distinctio quod nemo officiis cum officia cumque nisi sit at libero!</p>
-            <Button></Button>
+            <Button text='Check on GitHub'></Button>
         </article>
     </>
 }

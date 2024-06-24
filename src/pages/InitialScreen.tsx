@@ -9,7 +9,7 @@ function InitialScreen() {
                 <div className='text-6xl lg:text-8xl'><span className='first-letter'>N</span>icholas <span className='first-letter'>M</span>agi</div>
                 <div className='text-4xl'><span className='italic'>Aspirant</span> Web & Software Developer</div>
                 <div className='text-xl lg:text-2xl text-gray-500 pb-10'>Computer Science Undergraduate @ University of Bologna, IT</div>
-                <Button/>
+                <Button text='Download my CV'/>
             </div>
             <div className='order-first lg:order-last flex justify-center'>
                 <img className='max-w-64 lg:max-w-96' src={profile_picture} alt="Profile Picture" />
